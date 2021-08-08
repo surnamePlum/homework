@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔蛋</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="head-portrait">
+            <img src="./image/user.png" alt="">
+        </div>
+        <div class="main">
+            <div class="award">
+                <div class="shang">
+                    <ul class="across">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="xia">
+                    <ul class="across">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="against">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="magic">
+                <div class="game-currency">剩余游戏币：88 <a href="">[充值]</a></div>
+                <div class="egg">
+                    <img src="./image/dan.png" alt="">
+                </div>
+                <div class="begin">牛啊牛</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="obtain">获奖名单</div>
+
+            <ul class="list">
+                <li>
+                    <img src="./image/user.png" alt="">
+                    <div class="">
+                        <span>玩家微信凝成</span>
+                        <p>奖品名称</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script>
+    class Take {
+        constructor() {
+            this.begin = document.querySelector('.begin')
+            this.across = document.querySelector('.across')
+            this.eggImg = document.querySelector('.egg img')
+            this.twist()
+        }
+        twist() {
+            let that = this
+            this.across.addEventListener('click', function() {
+                that.shake()
+            })
+        }
+        shake() {
+            this.eggImg.src = "./image/dan2.gif";
+
+        }
+    }
+    let aa = new Take()
+</script>
+
+</html>

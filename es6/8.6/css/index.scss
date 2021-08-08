@@ -1,0 +1,141 @@
+@charset "UTF";
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: .16rem;
+}
+
+html {
+    font-size: 100px;
+}
+
+.box {
+    padding-top: 60px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/bg2.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    .head-portrait {
+        width: .55rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        img {
+            width: 100%;
+        }
+    }
+    .main {
+        width: 100%;
+        height: 85vh;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(../image/guang.png);
+        position: relative;
+        .award {
+            position: absolute;
+            top: .33rem;
+            left: .26rem;
+            li {
+                width: .8rem;
+                height: .8rem;
+                margin-right: 15px;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                background-size: cover;
+                background-position: center center;
+                background-image: url(../image/QQ20210806-0.png);
+            }
+            .shang,
+            .xia {
+                display: flex;
+                ul {
+                    &.across {
+                        display: flex;
+                    }
+                }
+                .against {
+                    margin-top: -3.8rem;
+                    flex-direction: row-reverse;
+                }
+            }
+            .xia {
+                flex-direction: row-reverse;
+            }
+        }
+        .magic {
+            width: 50%;
+            height: 3.7rem;
+            margin: 0 auto;
+            margin-top: 1.2rem;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center center;
+            background-image: url(../image/share_jiqi_bg.png);
+            .game-currency {
+                margin: 0 auto;
+                margin-top: .9rem;
+                width: 80%;
+                font-size: .14rem;
+                height: .26rem;
+                border-radius: 30px;
+                text-align: center;
+                line-height: .26rem;
+                background-color: #ffc123;
+            }
+            .egg {
+                width: 100%;
+                height: 1rem;
+                margin-top: .7rem;
+                text-align: center;
+                img {
+                    width: 70%;
+                }
+            }
+            .begin {
+                width: .5rem;
+                height: .5rem;
+                line-height: .5rem;
+                border-radius: 100%;
+                margin: 0 auto;
+                padding-left: .1rem;
+                margin-top: .2rem;
+            }
+        }
+    }
+    .footer {
+        .obtain {
+            width: 20%;
+            height: .3rem;
+            margin: 0 auto;
+            line-height: .3rem;
+            text-align: center;
+            border-radius: 30px;
+            background-color: #ffc123;
+        }
+        .list {
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, .3);
+            li {
+                display: flex;
+                img {
+                    width: .5rem;
+                    border-radius: 30px;
+                }
+                div {
+                    span {
+                        color: #19a6dc;
+                    }
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

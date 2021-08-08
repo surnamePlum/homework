@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老虎机</title>
+    <link rel="stylesheet" href="./css/老虎机.css">
+</head>
+
+<body>
+    <div class="box">
+        <button>go</button>
+        <div class="one">
+            <ul class="heng">
+                <li class="xuanzhong"></li>
+                <li style="background-position: -196px 0;"></li>
+                <li style="background-position: -296px 0;"></li>
+            </ul>
+            <ul>
+                <li style="background-position:  -392px 0;"></li>
+                <li style="background-position: -392px -96px;"></li>
+                <li style="background-position: 0 0;"></li>
+            </ul>
+        </div>
+        <div class="two">
+            <ul class="heng">
+                <li style="background-position: 0 0;"></li>
+                <li style="background-position: 0 0;"></li>
+                <li style="background-position: 0 0;"></li>
+            </ul>
+
+            <ul class="fan">
+                <li style="background-position: 0 0;"></li>
+                <li style="background-position: 0 0;"></li>
+                <li style="background-position: 0 0;"></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script>
+    // 适配
+    document.querySelector('html').style.fontSize = window.innerWidth + 'px';
+
+
+    // 抽奖
+    let button = document.querySelector('button')
+    let lis = document.querySelectorAll('li')
+    let index = 0;
+    button.onclick = e => {
+        zhuan()
+    }
+
+    function zhuan() {
+        let dings = setInterval(() => {
+            index++
+            if (index == lis.length) index = 0;
+            lis.forEach(val => {
+                val.className = ''
+            });
+            lis[index].className = 'xuanzhong';
+
+        }, .001)
+        setTimeout(() => {
+            clearInterval(dings)
+        }, 2000)
+    }
+    console.log(lis);
+</script>
+
+</html>

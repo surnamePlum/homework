@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老虎机</title>
+    <link rel="stylesheet" href="./css/老虎机.css">
+</head>
+
+<body>
+    <div class="box">
+        <button>go</button>
+        <div class="one">
+            <ul class="heng">
+                <li class="xuanzhong" style="background-position: 0 -292px;"></li>
+                <li style="background-position: -196px 0;"></li>
+                <li style="background-position: -296px 0;"></li>
+            </ul>
+            <ul>
+                <li style="background-position:  -394px 0;"></li>
+                <li style="background-position: -392px -96px;"></li>
+                <li style="background-position: 199px -98px;"></li>
+            </ul>
+        </div>
+        <div class="two">
+            <ul class="heng">
+                <li style="background-position: -98px -98px;"></li>
+                <li style="background-position: 0 -98px;"></li>
+                <li style="background-position: 0 -196px;"></li>
+            </ul>
+
+            <ul class="fan">
+                <li style="background-position: -98px -196px;"></li>
+                <li style="background-position: -196px -196px;"></li>
+                <li style="background-position: -292px -196px;"></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script>
+    class Tiger {
+        constructor() {
+            this.button = document.querySelector('button')
+            this.lis = document.querySelectorAll('li')
+            this.index = 0;
+            this.time = 500;
+            this.button.onclick = e => {
+                this.zhuan()
+            }
+        }
+
+        zhuan() {
+            console.log(this);
+            this.dings = setInterval(() => {
+                this.index++
+                    if (this.index == this.lis.length) this.index = 0;
+                this.lis.forEach(val => {
+                    val.className = ''
+                });
+                this.lis[this.index].className = 'xuanzhong';
+
+            }, 100)
+            setTimeout(() => {
+                clearInterval(this.dings)
+            }, this.time)
+        }
+    }
+    let aaa = new Tiger()
+</script>
+
+</html>

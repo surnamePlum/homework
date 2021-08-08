@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击出</title>
+</head>
+
+<body>
+    <button class="one">打开</button>
+    <button class="two">关闭</button>
+    <div style="display: none;">hello,树哥</div>
+</body>
+<script>
+    let body = document.querySelector('body')
+    body.onclick = (e) => {
+        if (e.target.className == 'one') {
+            e.target.nextElementSibling.nextElementSibling.style.display = 'block';
+        } else if (e.target.className == 'two') {
+            e.target.nextElementSibling.style.display = 'none';
+        }
+    }
+</script>
+
+</html>
